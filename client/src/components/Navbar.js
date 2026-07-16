@@ -1,15 +1,17 @@
+import "./Navbar.css";
+
 function Navbar() {
   return (
     <nav className="navbar">
       <div className="logo">
-        🎉 EventEase
+        🎉 <span>EventEase</span>
       </div>
 
       <ul className="nav-links">
-        <li>Home</li>
-        <li>Events</li>
-        <li>RSVP</li>
-        <li>Contact</li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/">Events</a></li>
+        <li><a href="/">RSVP</a></li>
+        <li><a href="/">Contact</a></li>
       </ul>
     </nav>
   );
