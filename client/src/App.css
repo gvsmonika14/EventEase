@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #ff512f, #dd2476, #8e2de2, #4a00e0);
+  background-size: 400% 400%;
+  animation: gradientAnimation 12s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.hero,
+.form-card {
+  width: 100%;
+  max-width: 650px;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 35px;
+  margin-bottom: 30px;
+  border: 1px solid rgba(255,255,255,0.25);
+  box-shadow: 0 10px 35px rgba(0,0,0,0.25);
+  color: white;
+  transition: all 0.4s ease;
+}
+
+.hero:hover,
+.form-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+}
+
+.hero h1 {
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.hero h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffe082;
+}
+
+.hero p {
+  font-size: 18px;
+  margin: 12px 0;
+}
+
+.form-card h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 18px;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  font-size: 16px;
+}
+
+input:focus {
+  box-shadow: 0 0 12px rgba(255,255,255,0.7);
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #ff9800, #ff4081);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255,152,0,0.5);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  margin: 20px 0;
+}
+/* Navbar */
+
+.navbar {
+  width: 100%;
+  padding: 20px 60px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(18px);
+
+  border-bottom: 1px solid rgba(255,255,255,.2);
+
+  position: sticky;
+  top: 0;
+
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+}
+
+.nav-links li {
+  color: white;
+  cursor: pointer;
+  transition: .3s;
+  font-weight: 500;
+}
+
+.nav-links li:hover {
+  color: #ffd54f;
+}
