@@ -1,0 +1,50 @@
+.schedule-section {
+  width: 90%;
+  margin: 80px auto;
+  text-align: center;
+}
+
+.schedule-section h2 {
+  font-size: 42px;
+  color: white;
+  margin-bottom: 50px;
+}
+
+.schedule-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.schedule-card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(18px);
+  border-radius: 20px;
+  padding: 30px;
+  transition: 0.4s;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.schedule-card:hover {
+  transform: translateY(-10px) scale(1.03);
+}
+
+.icon {
+  font-size: 55px;
+  margin-bottom: 20px;
+}
+
+.schedule-card h3 {
+  color: #ffd54f;
+  margin-bottom: 10px;
+}
+
+.schedule-card h4 {
+  color: white;
+  margin-bottom: 15px;
+}
+
+.schedule-card p {
+  color: #e8e8e8;
+  line-height: 1.6;
+}
