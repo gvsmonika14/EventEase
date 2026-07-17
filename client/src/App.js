@@ -1,24 +1,19 @@
-import Navbar from "./components/Navbar";
 import "./App.css";
+
+import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import Countdown from "./components/Countdown";
 import RSVPForm from "./components/RSVPForm";
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <Navbar />
-
-      <div className="container">
-        <Hero
-          eventName="Annual Tech Conference 2026"
-          eventDate="25 December 2026"
-          eventTime="10:00 AM"
-          venue="Hyderabad"
-        />
-
-        <RSVPForm />
-      </div>
+      <Hero />
+      <Countdown />
+      <RSVPForm />
     </div>
   );
 }
+
 export default App;

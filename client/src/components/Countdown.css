@@ -1,0 +1,46 @@
+.countdown {
+  width: 85%;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.countdown h2 {
+  font-size: 38px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.countdown-box {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.countdown-box div {
+  width: 150px;
+  padding: 30px;
+
+  background: rgba(255,255,255,.15);
+  backdrop-filter: blur(18px);
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,.2);
+
+  transition: .3s;
+}
+
+.countdown-box div:hover {
+  transform: translateY(-10px);
+}
+
+.countdown-box h1 {
+  font-size: 50px;
+  color: #ffe082;
+}
+
+.countdown-box p {
+  margin-top: 10px;
+  font-size: 18px;
+}

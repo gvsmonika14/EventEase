@@ -1,23 +1,44 @@
-function Hero(props) {
+import "./Hero.css";
+
+function Hero() {
   return (
-    <div className="hero">
-      <h1>🎉 {props.eventName}</h1>
+    <section className="hero">
 
-      <h2>RSVP Management System</h2>
+      <div className="hero-card">
 
-      <p>
-        Join us for an exciting day of learning, networking,
-        and innovation!
-      </p>
+        <h1>🎉 Annual Tech Conference 2026</h1>
 
-      <hr />
+        <h3>Where Innovation Meets Technology</h3>
 
-      <p>📅 <strong>Date:</strong> {props.eventDate}</p>
+        <p>
+          Join developers, designers and innovators for an unforgettable
+          experience filled with learning, networking and exciting sessions.
+        </p>
 
-      <p>⏰ <strong>Time:</strong> {props.eventTime}</p>
+        <button>Register Now 🚀</button>
 
-      <p>📍 <strong>Venue:</strong> {props.venue}</p>
-    </div>
+        <div className="hero-info">
+
+          <div>
+            <h2>📅</h2>
+            <span>25 Dec 2026</span>
+          </div>
+
+          <div>
+            <h2>📍</h2>
+            <span>Hyderabad</span>
+          </div>
+
+          <div>
+            <h2>👥</h2>
+            <span>500+ Guests</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
   );
 }
 
