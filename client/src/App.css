@@ -1,33 +1,30 @@
-/* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body */
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  overflow-x: hidden;
 
   background: linear-gradient(
-    135deg,
-    #ff6ec4,
-    #7873f5,
-    #4facfe,
-    #43e97b
+    -45deg,
+    #4f46e5,
+    #7c3aed,
+    #2563eb,
+    #06b6d4
   );
 
   background-size: 400% 400%;
-  animation: gradientMove 12s ease infinite;
-
-  color: white;
+  animation: gradientBG 15s ease infinite;
 }
 
-/* Animation */
-@keyframes gradientMove {
+@keyframes gradientBG {
   0% {
     background-position: 0% 50%;
   }
@@ -41,7 +38,69 @@ body {
   }
 }
 
-/* Main Container */
 .App {
   min-height: 100vh;
+}
+
+section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 80px auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: white;
+}
+
+p {
+  color: #e9e9e9;
+}
+
+button {
+  padding: 14px 30px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+  color: white;
+
+  background: linear-gradient(135deg, #ff7b00, #ff4081);
+
+  transition: all 0.35s ease;
+}
+
+button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(255, 64, 129, 0.45);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  border-radius: 22px;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+
+  transition: all 0.4s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-10px) scale(1.03);
+
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.35);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+html {
+  scroll-behavior: smooth;
 }
