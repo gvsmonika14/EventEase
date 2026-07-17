@@ -1,0 +1,99 @@
+.rsvp-section{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:80px 20px;
+}
+
+.form-card{
+
+    width:100%;
+    max-width:550px;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(18px);
+
+    padding:40px;
+
+    border-radius:25px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+.form-card h2{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    font-size:32px;
+}
+
+.form-card form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+}
+
+.form-card input{
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    outline:none;
+}
+
+.form-card button{
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#ffffff;
+
+    color:#6a11cb;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.form-card button:hover{
+
+    transform:scale(1.05);
+
+}
+
+.success-message{
+
+    background:rgba(76,175,80,.25);
+
+    border:1px solid rgba(255,255,255,.3);
+
+    color:white;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    margin-bottom:20px;
+
+    text-align:center;
+
+    font-weight:bold;
+}

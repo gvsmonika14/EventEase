@@ -1,0 +1,38 @@
+.highlights {
+  width: 90%;
+  margin: 80px auto;
+  text-align: center;
+}
+
+.highlights h2 {
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.highlight-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(15px);
+  padding: 30px;
+  border-radius: 20px;
+  transition: 0.3s;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  color: #ffe082;
+}
+
+.card p {
+  line-height: 1.6;
+}
