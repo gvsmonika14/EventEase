@@ -7,6 +7,7 @@ import EventHighlights from "./components/EventHighlights";
 import EventSchedule from "./components/EventSchedule";
 import Speakers from "./components/Speakers";
 import Gallery from "./components/Gallery";
+import FAQ from "./components/FAQ";
 import RSVPForm from "./components/RSVPForm";
 import Footer from "./components/Footer";
 
@@ -20,6 +21,7 @@ function App() {
       <EventSchedule />
       <Speakers />
       <Gallery />
+      <FAQ />
       <RSVPForm />
       <Footer />
     </div>
