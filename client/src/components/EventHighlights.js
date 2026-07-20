@@ -2,7 +2,10 @@ import "./EventHighlights.css";
 
 function EventHighlights() {
   return (
-    <section className="highlights">
+    <section id="events"
+    className="highlights"
+    data-aos="fade-right"
+    >
 
       <h2>🌟 Why Attend?</h2>
 

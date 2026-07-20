@@ -1,8 +1,8 @@
-import "./App.css";
-import "aos/dist/aos.css";
-
-import { useEffect } from "react";
+import AdminDashboard from "./components/AdminDashboard";
+import { useEffect, useState } from "react";
 import AOS from "aos";
+import "aos/dist/aos.css";
+import "./App.css";
 
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -12,67 +12,45 @@ import EventSchedule from "./components/EventSchedule";
 import Speakers from "./components/Speakers";
 import Gallery from "./components/Gallery";
 import FAQ from "./components/FAQ";
-import RSVPForm from "./components/RSVPForm";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     AOS.init({
       duration: 1000,
       once: true,
-      offset: 120,
     });
   }, []);
 
   return (
-    <div className="App">
+    <div className={darkMode ? "App dark-mode" : "App"}>
+      <Navbar
+        darkMode={darkMode}
+        setDarkMode={setDarkMode}
+      />
 
-      <div data-aos="fade-down">
-        <Navbar />
-      </div>
+      <Hero />
 
-      <div data-aos="zoom-in">
-        <Hero />
-      </div>
+      <Countdown />
 
-      <div data-aos="fade-up">
-        <Countdown />
-      </div>
+      <EventHighlights />
 
-      <div data-aos="fade-right">
-        <EventHighlights />
-      </div>
+      <EventSchedule />
 
-      <div data-aos="fade-left">
-        <EventSchedule />
-      </div>
+      <Speakers />
 
-      <div data-aos="zoom-in-up">
-        <Speakers />
-      </div>
+      <Gallery />
 
-      <div data-aos="zoom-in">
-        <Gallery />
-      </div>
+      <FAQ />
 
-      <div data-aos="fade-up">
-        <FAQ />
-      </div>
+      <AdminDashboard />
 
-      <div data-aos="flip-left">
-        <RSVPForm />
-      </div>
+      <Contact />
 
-      <div data-aos="fade-up">
-        <Contact />
-      </div>
-
-      <div data-aos="fade">
-        <Footer />
-      </div>
-
+      <Footer />
     </div>
   );
 }

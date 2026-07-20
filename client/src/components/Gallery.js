@@ -11,7 +11,7 @@ function Gallery() {
   ];
 
   return (
-    <section className="gallery">
+    <section className="gallery" data-aos="flip-left">
       <h2>📸 Event Gallery</h2>
       <p>Take a look at some memorable moments from our previous events.</p>
 

@@ -29,7 +29,7 @@ function Speakers() {
   ];
 
   return (
-    <section className="speakers">
+    <section className="speakers" data-aos="zoom-in-up">
       <h2>🎤 Meet Our Speakers</h2>
 
       <div className="speaker-container">

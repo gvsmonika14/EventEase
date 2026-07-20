@@ -41,7 +41,7 @@ function FAQ() {
   };
 
   return (
-    <section className="faq-section">
+    <section className="faq" data-aos="fade-up">
       <h2>❓ Frequently Asked Questions</h2>
 
       <div className="faq-container">

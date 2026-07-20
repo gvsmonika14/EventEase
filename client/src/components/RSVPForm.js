@@ -5,6 +5,7 @@ import "./RSVPForm.css";
 function RSVPForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [guests, setGuests] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
@@ -26,41 +27,63 @@ function RSVPForm() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
 
-    if (!name || !email || !guests) {
+    if (!name || !email || !phone || !guests) {
       alert("⚠ Please fill in all the fields.");
       return;
     }
 
-    setSubmitted(true);
+    try {
+      const response = await fetch("http://localhost:5000/api/rsvp", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          phone,
+          guests: Number(guests),
+        }),
+      });
 
-    setName("");
-    setEmail("");
-    setGuests("");
+      const data = await response.json();
 
-    // Hide confetti after 5 seconds
-    setTimeout(() => {
-      setSubmitted(false);
-    }, 5000);
+      if (response.ok) {
+        setSubmitted(true);
+
+        setName("");
+        setEmail("");
+        setPhone("");
+        setGuests("");
+
+        setTimeout(() => {
+          setSubmitted(false);
+        }, 5000);
+      } else {
+        alert(data.message);
+      }
+    } catch (error) {
+      console.error(error);
+      alert("❌ Unable to connect to the server.");
+    }
   }
 
   return (
-    <section className="rsvp-section">
-
+    <section id="rsvp" className="rsvp-section" data-aos="zoom-in">
       {submitted && (
         <Confetti
-        width={windowSize.width}
-        height={windowSize.height}
-        numberOfPieces={400}
-        recycle={false}
-        gravity={0.25}
+          width={windowSize.width}
+          height={windowSize.height}
+          numberOfPieces={400}
+          recycle={false}
+          gravity={0.25}
         />
       )}
 
       <div className="form-card">
-
         <h2>📝 RSVP Registration</h2>
 
         {submitted && (
@@ -70,7 +93,6 @@ function RSVPForm() {
         )}
 
         <form onSubmit={handleSubmit}>
-
           <input
             type="text"
             placeholder="👤 Enter your name"
@@ -86,20 +108,22 @@ function RSVPForm() {
           />
 
           <input
+            type="text"
+            placeholder="📱 Enter your phone number"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+          />
+
+          <input
             type="number"
             placeholder="👥 Number of guests"
             value={guests}
             onChange={(e) => setGuests(e.target.value)}
           />
 
-          <button type="submit">
-            Submit RSVP 🚀
-          </button>
-
+          <button type="submit">Submit RSVP 🚀</button>
         </form>
-
       </div>
-
     </section>
   );
 }

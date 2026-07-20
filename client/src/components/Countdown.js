@@ -33,7 +33,7 @@ function Countdown() {
   }, [eventDate]);
 
   return (
-    <section className="countdown">
+    <section className="countdown" data-aos="fade-up">
       <h2>⏳ Event Starts In</h2>
 
       <div className="countdown-box">

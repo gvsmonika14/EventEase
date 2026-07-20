@@ -35,7 +35,7 @@ function EventSchedule() {
   ];
 
   return (
-    <section className="schedule-section">
+    <section className="schedule" data-aos="fade-left">
       <h2>📅 Event Schedule</h2>
 
       <div className="schedule-container">

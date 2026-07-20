@@ -1,10 +1,13 @@
-/* Google Font */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -14,10 +17,10 @@ body {
 
   background: linear-gradient(
     -45deg,
-    #4f46e5,
-    #7c3aed,
-    #2563eb,
-    #06b6d4
+    #6a11cb,
+    #2575fc,
+    #7b2ff7,
+    #00c6ff
   );
 
   background-size: 400% 400%;
@@ -50,50 +53,29 @@ section {
 
 h1,
 h2,
-h3,
-h4 {
+h3 {
   color: white;
 }
 
 p {
-  color: #e9e9e9;
+  color: #eeeeee;
 }
 
 button {
-  padding: 14px 30px;
   border: none;
-  border-radius: 50px;
   cursor: pointer;
-  font-size: 17px;
+  border-radius: 40px;
+  padding: 14px 28px;
+  font-size: 16px;
   font-weight: 600;
   color: white;
-
   background: linear-gradient(135deg, #ff7b00, #ff4081);
-
   transition: all 0.35s ease;
 }
 
 button:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(255, 64, 129, 0.45);
-}
-
-.glass-card {
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-
-  border-radius: 22px;
-
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
-
-  transition: all 0.4s ease;
-}
-
-.glass-card:hover {
-  transform: translateY(-10px) scale(1.03);
-
-  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 15px 30px rgba(255, 64, 129, 0.45);
 }
 
 img {
@@ -101,6 +83,35 @@ img {
   display: block;
 }
 
-html {
-  scroll-behavior: smooth;
+/* ---------- Dark Mode ---------- */
+
+.dark-mode {
+  background: #0f172a !important;
+  color: white;
+  transition: 0.5s;
+}
+
+.dark-mode .navbar,
+.dark-mode .form-card,
+.dark-mode .contact-card,
+.dark-mode .faq-card,
+.dark-mode .speaker-card,
+.dark-mode .gallery-card,
+.dark-mode .highlight-card,
+.dark-mode .schedule-card,
+.dark-mode .countdown-box,
+.dark-mode footer {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode p,
+.dark-mode li {
+  color: white;
+}
+
+.dark-mode button {
+  background: linear-gradient(135deg, #ff9800, #ff4081);
 }

@@ -2,7 +2,7 @@ import "./Contact.css";
 
 function Contact() {
   return (
-    <section className="contact-section">
+    <section id="contact" className="contact-section" data-aos="fade-up">
       <h2>📞 Contact Us</h2>
       <p className="contact-subtitle">
         Have questions? We'd love to hear from you!
