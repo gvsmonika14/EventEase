@@ -15,24 +15,24 @@
   gap: 25px;
 }
 
-.card {
-  background: rgba(255,255,255,0.15);
+.highlight-card {
+  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(15px);
   padding: 30px;
   border-radius: 20px;
-  transition: 0.3s;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transition: all 0.35s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-.card:hover {
+.highlight-card:hover {
   transform: translateY(-10px) scale(1.03);
 }
 
-.card h3 {
+.highlight-card h3 {
   margin-bottom: 15px;
   color: #ffe082;
 }
 
-.card p {
+.highlight-card p {
   line-height: 1.6;
 }

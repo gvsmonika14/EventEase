@@ -2,45 +2,44 @@ import "./EventHighlights.css";
 
 function EventHighlights() {
   return (
-    <section id="events"
-    className="highlights"
-    data-aos="fade-right"
-    >
-
-      <h2>🌟 Why Attend?</h2>
+    <section className="highlights" id="events">
+      <h2>✨ Why Attend?</h2>
 
       <div className="highlight-container">
 
-        <div className="card">
-          <h3>💡 Learn from Experts</h3>
+        <div className="highlight-card">
+          <h3>🎤 Inspiring Speakers</h3>
           <p>
-            Attend inspiring sessions by experienced industry professionals.
+            Learn from industry experts, innovators, and successful
+            entrepreneurs sharing their experiences.
           </p>
         </div>
 
-        <div className="card">
-          <h3>🤝 Network</h3>
+        <div className="highlight-card">
+          <h3>🤝 Networking</h3>
           <p>
-            Connect with developers, students, and recruiters.
+            Meet professionals, students, and recruiters to build valuable
+            career connections.
           </p>
         </div>
 
-        <div className="card">
-          <h3>🚀 Hands-on Workshops</h3>
+        <div className="highlight-card">
+          <h3>🚀 Workshops</h3>
           <p>
-            Build exciting projects and improve your practical skills.
+            Participate in interactive sessions, coding workshops, and
+            hands-on technical activities.
           </p>
         </div>
 
-        <div className="card">
-          <h3>🏆 Win Exciting Prizes</h3>
+        <div className="highlight-card">
+          <h3>🎁 Exciting Rewards</h3>
           <p>
-            Participate in competitions and win certificates and goodies.
+            Win exciting prizes, certificates, goodies, and exclusive
+            opportunities throughout the event.
           </p>
         </div>
 
       </div>
-
     </section>
   );
 }

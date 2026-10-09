@@ -1,7 +1,7 @@
-import AdminDashboard from "./components/AdminDashboard";
-import { useEffect, useState } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import ProtectedRoute from "./components/ProtectedRoute";
+import { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+
 import "./App.css";
 
 import Navbar from "./components/Navbar";
@@ -12,46 +12,77 @@ import EventSchedule from "./components/EventSchedule";
 import Speakers from "./components/Speakers";
 import Gallery from "./components/Gallery";
 import FAQ from "./components/FAQ";
+import RSVPForm from "./components/RSVPForm";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
-function App() {
-  const [darkMode, setDarkMode] = useState(false);
+import AdminDashboard from "./components/AdminDashboard";
+import AdminLogin from "./components/AdminLogin";
 
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  }, []);
-
+function HomePage({ darkMode, setDarkMode }) {
   return (
-    <div className={darkMode ? "App dark-mode" : "App"}>
+    <>
       <Navbar
         darkMode={darkMode}
         setDarkMode={setDarkMode}
       />
 
       <Hero />
-
       <Countdown />
-
       <EventHighlights />
-
       <EventSchedule />
-
       <Speakers />
-
       <Gallery />
-
       <FAQ />
-
-      <AdminDashboard />
-
+      <RSVPForm />
       <Contact />
-
       <Footer />
-    </div>
+    </>
+  );
+}
+
+function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add("dark-mode");
+    } else {
+      document.body.classList.remove("dark-mode");
+    }
+  }, [darkMode]);
+
+  return (
+    <Routes>
+
+      {/* Home Page */}
+      <Route
+        path="/"
+        element={
+          <HomePage
+            darkMode={darkMode}
+            setDarkMode={setDarkMode}
+          />
+        }
+      />
+
+      {/* Admin Login */}
+      <Route
+        path="/admin-login"
+        element={<AdminLogin />}
+      />
+
+      {/* Protected Admin Dashboard */}
+      <Route
+        path="/admin"
+        element={
+          <ProtectedRoute>
+            <AdminDashboard />
+          </ProtectedRoute>
+        }
+      />
+
+    </Routes>
   );
 }
 

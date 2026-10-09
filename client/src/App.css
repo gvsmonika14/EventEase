@@ -25,6 +25,7 @@ body {
 
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
+  transition: background 0.5s ease, color 0.5s ease;
 }
 
 @keyframes gradientBG {
@@ -83,35 +84,44 @@ img {
   display: block;
 }
 
-/* ---------- Dark Mode ---------- */
+/* ========================= */
+/*       DARK MODE           */
+/* ========================= */
 
-.dark-mode {
+body.dark-mode {
   background: #0f172a !important;
-  color: white;
-  transition: 0.5s;
-}
-
-.dark-mode .navbar,
-.dark-mode .form-card,
-.dark-mode .contact-card,
-.dark-mode .faq-card,
-.dark-mode .speaker-card,
-.dark-mode .gallery-card,
-.dark-mode .highlight-card,
-.dark-mode .schedule-card,
-.dark-mode .countdown-box,
-.dark-mode footer {
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.dark-mode h1,
-.dark-mode h2,
-.dark-mode h3,
-.dark-mode p,
-.dark-mode li {
+  background-image: none !important;
   color: white;
 }
 
-.dark-mode button {
+body.dark-mode .navbar,
+body.dark-mode .form-card,
+body.dark-mode .contact-card,
+body.dark-mode .faq-card,
+body.dark-mode .speaker-card,
+body.dark-mode .gallery-card,
+body.dark-mode .highlight-card,
+body.dark-mode .schedule-card,
+body.dark-mode .countdown-box,
+body.dark-mode footer {
+  background: rgba(30, 41, 59, 0.9) !important;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode a,
+body.dark-mode span {
+  color: white;
+}
+
+body.dark-mode button {
   background: linear-gradient(135deg, #ff9800, #ff4081);
 }

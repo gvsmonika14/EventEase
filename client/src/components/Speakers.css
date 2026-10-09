@@ -17,16 +17,18 @@
 }
 
 .speaker-card {
-  background: rgba(255,255,255,0.12);
+  background: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(18px);
   border-radius: 20px;
   padding: 30px;
-  transition: 0.4s;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  transition: all 0.35s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .speaker-card:hover {
   transform: translateY(-10px) scale(1.04);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.35);
 }
 
 .speaker-card img {
@@ -35,19 +37,23 @@
   border-radius: 50%;
   object-fit: cover;
   border: 5px solid #ffd54f;
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
+  display: block;
 }
 
 .speaker-card h3 {
   color: white;
   margin-bottom: 10px;
+  font-size: 24px;
 }
 
 .speaker-card h4 {
   color: #ffd54f;
   margin-bottom: 10px;
+  font-size: 18px;
 }
 
 .speaker-card p {
   color: #e8e8e8;
+  font-size: 15px;
 }
